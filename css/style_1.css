@@ -1,0 +1,273 @@
+/* Akrobat400 */
+@font-face {
+    font-family: 'Akrobat';
+    font-size: 'normal';
+    font-weight: 400;
+    src: url('../fonts/Akrobat-Regular.woff') format('woff'), url('../fonts/Akrobat-Regular.woff2') format('woff2');
+}
+/* Calibri400 */
+@font-face {
+    font-family: 'Calibri';
+    font-size: 'normal';
+    font-weight: 400;
+    src: url('../fonts/Calibri_Regular.ttf');
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+
+
+.page{
+    max-width: 1920px;
+    min-width: 230px;
+    margin: 0 auto;
+    /* для style_2 => media => navi */
+    position: relative;
+    overflow: hidden;
+}
+
+.head{
+    background: linear-gradient(0deg, rgba(25, 100, 107, 0.64) 0%, rgba(25, 100, 107, 0.64) 100%), url("../img/City.jpg"), lightgray 0px -40px / 100% 180%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.shapka{
+    width: 73%;
+    margin: 0 auto;
+    padding: 56px 0px 72px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+#logo{
+    width: 193px;
+    height: 192px;
+}
+#slogan{
+    width: 330px;
+    font-family: Akrobat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    color: #FFF;
+    line-height: 40px;
+}
+
+
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+.disp_sec{
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;
+}
+.tel{
+    min-width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+.disp{
+    font-family: Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #FFF;
+    line-height: 16px;
+}
+a{
+    text-decoration: none;
+    display: flex;
+    gap: 8px;
+}
+.phone{
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+}
+.phone_disp{
+    font-family: Akrobat, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+#whatsapp{
+    width: 32px;
+    height: 32px;
+}
+.sapp{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.sapp_disp{
+    font-family: Akrobat, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 32px;
+}
+
+
+
+/* hover'a */
+.phone_disp:hover > a{
+    font-weight: bold;
+    transition: 0.5s;
+}
+.sapp_disp:hover{
+    font-size: 180%;
+    transition: 0.5s;
+}
+.tel:hover .phone{
+    animation: shake_phone 0.5s;
+}
+
+
+
+/* BURGER */
+.burger{
+    width: 32px;
+    height: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+.burger #burger_span{
+    display: block;
+    height: 2px;
+    background: white;
+    box-shadow: 0px 7px 0px 0px white, 0px -7px 0px 0px white;
+}
+
+
+
+/* **************************************** */
+/* mobile - >=280px-480px
+tablet - >=768px
+laptop - >=1024px-1440px
+monitor - >=1280,1600,1920px */
+
+@media (max-width: 1600px) {
+    .shapka{
+        width: 85%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .shapka{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .shapka{
+        width: 85%;
+    }
+    #slogan{
+        width: 230px;
+        font-size: 24px;
+    }
+    .phone_disp{
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .shapka{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .shapka{
+        width: 95%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .shapka{
+        width: 85%;
+        padding: 24px 0px 24px 0px;
+        align-items: flex-start;
+    }
+    #logo{
+        width: 80px;
+        height: 80px;
+    }
+    .phone_disp{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    #slogan{
+        width: 150px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .header_logo{
+        gap: 24px;
+    }
+
+/* ------------------ */
+    .burger{
+        display: block;
+    }
+}
+@media (max-width: 900px) {
+    .shapka{
+        width: 90%;
+    }
+    .header_logo{
+        gap: 16px;
+    }
+    .disp_sec{
+        gap: 16px;
+    }
+}
+@media (max-width: 760px) {
+    .contacts{
+        display: none;
+    }
+    .burger{
+        margin: auto 0;
+    }
+}
+@media (max-width: 310px) {
+    #slogan{
+        display: none;
+    }
+}
+
+
+
+@keyframes shake_phone{
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(0deg); }
+    60% { transform: rotate(10deg); }
+    80% { transform: rotate(0deg); }
+    100% { transform: rotate(10deg); }
+}

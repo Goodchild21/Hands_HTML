@@ -1,0 +1,234 @@
+.navi{
+    width: 73%;
+    margin: 0 auto;
+    height: 64px;
+    margin-top: 40px;
+    padding-right: 8px;
+    border-radius: 32px;
+    background: #19646B;
+ 
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.navi .navi_item{
+    flex-basis: auto;
+    flex-grow: 1;
+    position: relative;
+}
+.border::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.32);
+    z-index: 2;
+}
+.navi_item > a{
+    color: rgba(255, 255, 255, 0.48);
+    font-family: Akrobat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    display: block;
+    padding: 24px 0;
+}
+.start_client{
+    font-family: Akrobat;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border-style: none;
+    border-radius: 24px;
+    background: #F7A420;
+    display: inline;
+}
+.contacts_navi{
+    display: none;
+}
+.strelka::after{
+    content: '\25BC';
+}
+/* .strelka::after > a:hover{
+    content: '\25B2';
+} */
+
+
+.dropdown{
+    position: relative;
+}
+.drop_menu{
+    width: 100%;
+    background: #28838C;
+    padding: 8px 24px 16px 24px;
+    position: absolute;
+    z-index: 1;
+    top: 64px;
+}
+.drop_item > a{
+    font-family: Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #FFF;
+    line-height: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+    padding: 8px 0px 8px 0px;
+    justify-content: center;
+}
+.drop_item:last-child > a {
+    border-bottom: none;
+}
+
+
+
+/* hover'a для подсвечивания */
+li:hover > a{
+    color: #FFF;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.drop_item:hover > a{
+    background: #19646B;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.start_client:hover{
+    font-size: 18px;
+    color:#FFF;
+    padding: 15px 33px;
+    border-radius: 25px;
+    transition: 2s; 
+}
+/* Погашение и дальнейшее подсвечивание дропменю */
+li.dropdown ul{
+    display: none;
+}
+li.dropdown:hover ul{
+    display: block;
+}
+
+
+
+/* ************************************ */
+/* mobile - >=280px-480px
+tablet - >=768px
+laptop - >=1024px-1440px
+monitor - >=1280,1600,1920px */
+
+@media (max-width: 1600px) {
+    .navi{
+        width: 85%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .navi{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .navi{
+        width: 85%;
+        padding-left: 24px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navi{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .navi{
+        width: 95%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .navi{
+        position: absolute;
+        width: 450px;
+        height: 100%;
+        padding: 48px 24px 0;
+        /*  */
+        transition: 1s;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        /* отмена переноса текста */
+        white-space: nowrap;
+
+        /* отмены */
+        text-align: left;
+        margin-top: 0px;
+        border-radius: 0px;
+        top: 0;
+        right: -100%;
+    }
+    .border::after{
+        display: none;
+    }
+    .navi_item > a{
+        padding: 0;
+    }
+    .navi .navi_item{
+        flex-grow: 0;
+    }
+    .contacts_navi{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contacts_navi > .sapp{
+        margin-top: 24px;
+    }
+
+
+
+    .burger{
+        margin-top: 32.5px;
+    }
+    .active{
+        left: none;
+        right: 0;
+    }
+
+    /* ширина для .drop_menu через .dropdown */
+    .navi > .dropdown{
+        width: 100%;
+    }
+    .drop_menu{
+        background: #28838C;
+        position: relative;
+        top: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 464px) {
+    .navi{
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .disp_sec{
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 300px) {
+    .navi{
+        white-space: normal;
+    }
+}

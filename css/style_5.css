@@ -1,0 +1,171 @@
+.info_container{
+    width: 73%;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.info_doska{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.info_date{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+.info_item{
+    padding: 32px;
+    border-radius: 32px;
+    background: #F2F7F7;
+}
+.info_text{
+    color: #000;
+    font-family: Calibri;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    /* white-space: nowrap; */
+}
+
+#gosuslugi{
+    width: 680px;
+    height: 592px;
+    background: url("../img/img_31.png") no-repeat;
+}
+
+.item_date{
+    padding-bottom: 16px;
+}
+.img_date{
+    display: inline;
+    width: 24px;
+}
+.text_date{
+    display: inline;
+    color: #19646B;
+    font-family: Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+#btn_info{
+    font-family: Akrobat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    color: #000;
+    background: #F7A420;
+    border-radius: 32px;
+    border: none;
+}
+
+
+
+/* ************************************ */
+@media (max-width: 1700px) {
+    #gosuslugi{
+        width: 592px;
+        background-position: right;
+    }
+}
+
+@media (max-width: 1600px) {
+    .info_container{
+        width: 85%;
+    }
+    .info_date{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1440px) {
+    .info_container{
+        width: 90%;
+    }
+    #gosuslugi{
+        width: 550px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .info_container{
+        width: 85%;
+    }
+}
+
+@media (max-width: 1250px) {
+    #gosuslugi{
+        width: 500px;
+    }
+    .info_doska{
+        gap: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .info_container{
+        width: 90%;
+    }
+    .info_text{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .info_container{
+        width: 95%;
+    }
+    #gosuslugi{
+        width: 450px;
+    }
+    .info_container{
+        gap: 16px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .info_container{
+        width: 85%;
+        padding: 24px 0px 24px 0px;
+    }
+    .info_doska{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .info_item{
+        gap: 16px;
+    }
+    .info_date{
+        align-items: center;
+        gap: 16px;
+    }
+    .info_doska{
+        gap: 16px;
+    }
+    #btn_info{
+        margin-top: 24px;
+    }
+    #gosuslugi{
+        margin-top: 34px;
+    }
+}
+
+@media (max-width: 900px) {
+    .info_container{
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    #gosuslugi{
+        width: 420px;
+    }
+}

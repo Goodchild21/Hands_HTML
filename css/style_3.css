@@ -1,0 +1,192 @@
+main{
+    width: 100%;
+    background: url('../img/123.jpg'), lightgray 0% 0% / 10.000000149011612px 10.000000149011612px repeat, #F2F7F7;
+    background-blend-mode: multiply, normal;
+}
+
+.about_company{
+    width: 73%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title_company{
+    font-family: Akrobat, sans-serif;
+    color: #000;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.text_company, .p1, .p2, .p3{
+    margin-top: 40px;
+    color: #666;
+    font-family: Calibri;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    margin-right: 80px;
+}
+#podrob1{
+    display: none;
+}
+#podrob2{
+    display: none;
+}
+#podrob3{
+    display: inline;
+}
+#podrob1, #podrob2, #podrob3{
+    color: #F7A420;
+    text-decoration: underline;
+}
+.title{
+    display: flex;
+    gap: 24px;
+}
+.telega{
+    display: inline-flex;
+    height: 64px;
+    padding: 16px 40px 16px 16px;
+    margin-top: 56px;
+    align-items: center;
+    border-radius: 32px;
+    background: #0595E6;
+    gap: 16px;
+}
+#telega{
+    color: #FFF;
+    font-family: Akrobat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+.line{
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background: #F7A420;
+    margin: auto 0;
+}
+
+
+
+.serts{
+    width: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.ser_1, .ser_3{
+    width: 314px;
+    /* height: 443.961px; */
+}
+.ser_2{
+    width: 360px;
+}
+
+
+
+/* hover'a */
+#telega:hover{
+    font-size: 27px;
+}
+.telega:hover img{
+    animation: rotate_simbol 0.5s;
+}
+
+
+/* ****************************************** */
+@media (max-width: 1600px) {
+    .about_company{
+        width: 85%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .about_company{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .about_company{
+        width: 85%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about_company{
+        width: 90%;
+    }
+    #podrob3{
+        display: none;
+    }
+    #podrob2{
+        display: inline;
+    }
+    .p3{
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .about_company{
+        width: 95%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .about_company{
+        width: 85%;
+    }
+    .text_company{
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .about_company{
+        width: 90%;
+    }
+}
+
+@media (max-width: 885px) {
+    .about_company{
+        flex-direction: column;
+    }
+    #podrob2{
+        display: none;
+    }
+    .p2{
+        display: none;
+    }
+    #podrob1{
+        display: inline;
+    }
+    .sertificat{
+        margin-top: 40px;
+    }
+}
+@media (max-width: 600px) {
+    .ser_2{
+        width: 220px;
+    }
+}
+
+
+
+@keyframes rotate_simbol{
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+}
